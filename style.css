@@ -1,0 +1,218 @@
+.title {
+    background-color: rgb(245, 245, 245);
+}
+
+h1 {
+    display: inline;
+}
+
+h4 {
+    display: inline;
+}
+
+.p-body,
+html {
+    background-image: url("tile.jpg");
+}
+
+body {
+    position: relative;
+    ;
+}
+
+.space {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+input {
+    border-style: hidden;
+    outline: none;
+    background-color: #f3f3f3;
+
+}
+
+input[type=text] {
+    width: 300px;
+    background-color: #f3f3f3;
+}
+
+input[type=time] {
+    width: 125px;
+    background-color: #f3f3f3;
+    border-left: #83adc0 2px solid;
+    padding-left: 20px;
+
+
+}
+
+
+button {
+    width: 120px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+button:hover {
+    background-color: #507eb6 !important;
+    outline: none;
+}
+
+.form-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 600px;
+    background-image: url("input\ note.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-size: 400px;
+
+}
+
+textarea {
+    resize: none;
+    border-style: hidden;
+    outline: none;
+    background-color: #f3f3f3;
+
+}
+
+.textbox {
+    background-attachment: local;
+    background-image:
+        linear-gradient(to right, #f3f3f3 10px, transparent 10px),
+        linear-gradient(to left, #f3f3f3 10px, transparent 10px),
+        repeating-linear-gradient(#f3f3f3, #f3f3f3 30px, #ccc 30px, #ccc 31px, #f3f3f3 31px);
+    line-height: 31px;
+    padding: 8px 10px;
+}
+
+.note {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("notebg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 500px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+
+}
+
+.notewords {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+    width: 90%;
+}
+
+.notewords>h5 {
+
+    padding-top: 65px;
+}
+
+.notewords>.notedisc {
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.time {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+
+
+.note i {
+    display: block;
+    position: absolute;
+
+    opacity: 0;
+
+}
+
+.note:hover i {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+
+    opacity: 100%;
+
+}
+
+.pageup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.note {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -webkit-animation: fadein 2s;
+    /* Safari and Chrome */
+    -o-animation: fadein 2s;
+    /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
