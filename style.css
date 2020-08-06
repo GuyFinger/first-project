@@ -1,13 +1,18 @@
 .title {
-    background-color: rgb(245, 245, 245);
+    background: linear-gradient(90deg, #f3f3f3, #507eb6);
+    background-size: 400% 400%;
 }
+
 
 h1 {
     display: inline;
+    font-family: 'Maven Pro', sans-serif !important;
 }
 
 h4 {
     display: inline;
+    font-family: 'Maven Pro', sans-serif !important;
+
 }
 
 .p-body,
