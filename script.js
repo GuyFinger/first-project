@@ -18,8 +18,8 @@ function preventNote() {
 
 function scrollFunction() {
   if (
-    document.body.scrollTop > 600 ||
-    document.documentElement.scrollTop > 600
+    document.body.scrollTop > 500 ||
+    document.documentElement.scrollTop > 500
   ) {
     scrollBackToTop.style.display = "block";
   } else {
@@ -58,7 +58,6 @@ function notesCounter() {
   return counter;
 }
 function saveCounterToLocalStorage(counter) {
-  JSON.parse(window.localStorage.getItem("counter"));
   window.localStorage.setItem("counter", JSON.stringify(counter));
 }
 
@@ -66,8 +65,7 @@ function saveCounterToLocalStorage(counter) {
 
 function addNoteOnClick() {
   if (!preventNote()) {
-    notesCounter(counter);
-    saveCounterToLocalStorage(counter);
+    saveCounterToLocalStorage(notesCounter());
     let newNote = getValFromDOM();
     saveNoteValuesToLocalStorage(newNote);
     createNote(newNote);
@@ -83,7 +81,7 @@ function getValFromDOM() {
 
   let hour = document.getElementById("hour").value;
 
-  let id = counter;
+  let id = JSON.parse(window.localStorage.getItem("counter"));
 
   return { title, disc, date, hour, id };
 }
@@ -139,9 +137,8 @@ function createNote(newNote) {
   //create X with font awesome to close tab
   let closeTabIcon = document.createElement("i");
   closeTabIcon.setAttribute("class", "closex fas fa-times fa-2x");
-  closeTabIcon.setAttribute("id", counter);
+  closeTabIcon.setAttribute("id", newNote.id);
   closeTabIcon.style = "cursor: pointer";
-  closeTabIcon.id;
 
   closeTabIcon.addEventListener("click", closetab);
   closeTabIcon.addEventListener("click", removeTabFromLocalStorage);
@@ -159,12 +156,14 @@ function createNote(newNote) {
 //FUNCTIONS ABOVE
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //CODE BELOW
-
 let counter;
-// check if local storage counter is empty. if so, create counter key.
+
+// check if local storage counter is empty. if so, reset and create counter key.
 if (localStorage.getItem("counter") === null) {
   counter = 0;
-  window.localStorage.setItem("counter", JSON.stringify([]));
+  window.localStorage.setItem("counter", "0");
+} else {
+  counter = JSON.parse(window.localStorage.getItem("counter"));
 }
 
 // check if local storage is empty. if not, get data from local storage to DOM
