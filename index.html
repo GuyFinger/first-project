@@ -11,19 +11,21 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <i id="pageup" class="pageup fas fa-arrow-circle-up fa-3x" style="color:#f3f3f3"></i>
+    <i id="pageup" class="pageup fas fa-arrow-circle-up fa-4x  animate__animated animate__backInUp"
+        style="color:#f3f3f3"></i>
 
-    <div class=" title container-fluid d-flex justify-content-center align-items-baseline ">
-        <h4 class="display-4 text-primary">MY</h4>
-        <h1 class="display-1 text-secondary"> TDL</h1>
+    <div class=" title container-fluid d-flex justify-content-center align-items-baseline  ">
+        <h4 class="display-4 text-primary animate__animated animate__bounceInLeft">MY</h4>
+        <h1 class="display-1 text-secondary animate__animated animate__bounceInLeft"> TDL</h1>
     </div>
 
     <div class="p-body">
-        <div class="form-bg">
+        <div class="form-bg  animate__animated animate__fadeInDownBig">
             <div class="forminputs d-flex justify-content-center align-items-center">
 
                 <form action="" id="form" name="notemaker">
@@ -40,8 +42,6 @@
                     <button type="button" id="add" class="btn btn-secondary" value="submit">Add Task</button>
                     <button type="reset" id="reset" class="btn btn-secondary" value="reset form">Reset</button>
                 </form>
-
-
 
 
             </div>
